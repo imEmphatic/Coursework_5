@@ -8,9 +8,9 @@ def main():
     params = config()
     database_name = "hh"  #Название базы данных
 
-    hh_api = HeadHunterRuAPI    #Получение данных по API
-    companies = hh_api.getting_info_company()   #Получение данных по компаниям
-    vacancies = hh_api.getting_vacancy()    #Получение данных по вакансиям
+    hh_api = HeadHunterRuAPI  #Получение данных по API
+    companies = hh_api.getting_info_company()  #Получение данных по компаниям
+    vacancies = hh_api.getting_vacancy()  #Получение данных по вакансиям
 
     # Создание базы данных и таблиц
     hh_database = DataBase
@@ -50,7 +50,7 @@ def main():
 
         elif user_input == 3:
             avg_salary = db_manager.get_avg_salary()
-            print(f"Средняя зарплата по вакансиям: {round(avg_salary[0][0],2)}\n")
+            print(f"Средняя зарплата по вакансиям: {round(avg_salary[0][0], 2)}\n")
 
         elif user_input == 4:
             vacancies_with_higher_salary = db_manager.get_vacancies_with_higher_salary()
